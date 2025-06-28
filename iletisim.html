@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>İletişim - Günenç Tavukçuluk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>İletişim</h1>
+  <nav>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <ul class="menu" id="menu">
+    <li><a href="index.html">Ana Sayfa</a></li>
+
+    <li class="dropdown">
+      <a href="hakkimizda.html">Hakkımızda</a>
+      <ul class="submenu">
+        <li><a href="bakim-ve-asi.html">Bakım ve Aşı</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="urunler.html">Ürünler</a>
+      <ul class="submenu">
+        <li><a href="yumurta.html">Yumurta</a></li>
+        <li><a href="ekipman.html">Ekipman</a></li>
+      </ul>
+    </li>
+
+    <li><a href="iletisim.html">İletişim</a></li>
+  </ul>
+</nav>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+  }
+</script>
+  </header>
+
+  <main>
+    <h2>Bize Ulaşın</h2>
+    <p><strong>Adres:</strong> Küçükkışla Mahallesi Küçükkışla İç Yolu, Kaynarca, Sakarya</p>
+    <p><strong>Telefon:</strong> <a href="tel:+905316742303">0531 674 2303</a></p>
+    <p><strong>E-posta:</strong> <a href="mailto:info@gunenctavukculuk.com">info@gunenctavukculuk.com</a></p>
+    <p><strong>Web Sitesi:</strong> <a href="https://www.gunenctavukculuk.com" target="_blank">www.gunenctavukculuk.com</a></p>
+
+    <h3>Google Haritalar</h3>
+    <p><a href="https://www.google.com/maps/search/?api=1&query=K%C3%BC%C3%A7%C3%BCkk%C4%B1%C5%9Fla+Mahallesi+Kaynarca+Sakarya" target="_blank">Konum için tıklayın</a></p>
+  </main>
+
+  <footer>
+    <p>© 2025 Günenç Tavukçuluk</p>
+  </footer>
+</body>
+</html>
