@@ -2,26 +2,31 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>İletişim - Günenç Tavukçuluk</title>
+  <title>Iletisim</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>İletişim</h1>
-  <nav>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<header class="logo-bar">
+  <img src="logo.png" alt="Günenç Tavukçuluk Logosu" class="logo-img">
+</header>
+
+
+<nav>
+  <div class="menu-toggle" onclick="toggleMenu()">☰ Menü</div>
   <ul class="menu" id="menu">
     <li><a href="index.html">Ana Sayfa</a></li>
 
     <li class="dropdown">
-      <a href="hakkimizda.html">Hakkımızda</a>
+      <a href="#">Hakkımızda</a>
       <ul class="submenu">
+        <li><a href="hakkimizda.html">Kurumsal</a></li>
         <li><a href="bakim-ve-asi.html">Bakım ve Aşı</a></li>
       </ul>
     </li>
 
     <li class="dropdown">
-      <a href="urunler.html">Ürünler</a>
+      <a href="#">Ürünler</a>
       <ul class="submenu">
         <li><a href="yumurta.html">Yumurta</a></li>
         <li><a href="ekipman.html">Ekipman</a></li>
@@ -34,25 +39,23 @@
 
 <script>
   function toggleMenu() {
-    var menu = document.getElementById("menu");
-    menu.classList.toggle("active");
+    document.getElementById("menu").classList.toggle("active");
   }
+
+  document.querySelectorAll(".dropdown > a").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        let submenu = this.nextElementSibling;
+        submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+      }
+    });
+  });
 </script>
-  </header>
 
-  <main>
-    <h2>Bize Ulaşın</h2>
-    <p><strong>Adres:</strong> Küçükkışla Mahallesi Küçükkışla İç Yolu, Kaynarca, Sakarya</p>
-    <p><strong>Telefon:</strong> <a href="tel:+905316742303">0531 674 2303</a></p>
-    <p><strong>E-posta:</strong> <a href="mailto:info@gunenctavukculuk.com">info@gunenctavukculuk.com</a></p>
-    <p><strong>Web Sitesi:</strong> <a href="https://www.gunenctavukculuk.com" target="_blank">www.gunenctavukculuk.com</a></p>
-
-    <h3>Google Haritalar</h3>
-    <p><a href="https://www.google.com/maps/search/?api=1&query=K%C3%BC%C3%A7%C3%BCkk%C4%B1%C5%9Fla+Mahallesi+Kaynarca+Sakarya" target="_blank">Konum için tıklayın</a></p>
-  </main>
-
-  <footer>
-    <p>© 2025 Günenç Tavukçuluk</p>
-  </footer>
+<main>
+  <h1>Iletisim</h1>
+  <p>Bu, Iletisim sayfasıdır.</p>
+</main>
 </body>
 </html>
