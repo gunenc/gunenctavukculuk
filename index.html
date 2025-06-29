@@ -1,52 +1,64 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Günenç Tavukçuluk</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Günenç Tavukçuluk</h1>
+    <div class="top-bar">
+      <img src="logo.png" alt="Günenç Tavukçuluk Logosu" class="logo" />
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/14EgSnN86KV/" target="_blank"><img src="facebook.png" alt="Facebook" /></a>
+        <a href="https://wa.me/905316742303" target="_blank"><img src="whatsapp.png" alt="WhatsApp" /></a>
+      </div>
+    </div>
     <nav>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  <ul class="menu" id="menu">
-    <li><a href="index.html">Ana Sayfa</a></li>
-
-    <li class="dropdown">
-      <a href="hakkimizda.html">Hakkımızda</a>
-      <ul class="submenu">
-        <li><a href="bakim-ve-asi.html">Bakım ve Aşı</a></li>
+      <ul class="menu">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li>
+          <a href="#">Hakkımızda</a>
+          <ul class="submenu">
+            <li><a href="hakkimizda.html">Kurumsal</a></li>
+            <li><a href="bakim-ve-asi.html">Bakım ve Aşı</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Ürünler</a>
+          <ul class="submenu">
+            <li><a href="tavuk.html">Tavuk</a></li>
+            <li><a href="yumurta.html">Yumurta</a></li>
+            <li><a href="ekipman.html">Ekipman</a></li>
+            <li><a href="kulucka.html">Kuluçka</a></li>
+          </ul>
+        </li>
+        <li><a href="iletisim.html">İletişim</a></li>
       </ul>
-    </li>
-
-    <li class="dropdown">
-      <a href="urunler.html">Ürünler</a>
-      <ul class="submenu">
-        <li><a href="yumurta.html">Yumurta</a></li>
-        <li><a href="ekipman.html">Ekipman</a></li>
-      </ul>
-    </li>
-
-    <li><a href="iletisim.html">İletişim</a></li>
-  </ul>
-</nav>
-
-<script>
-  function toggleMenu() {
-    var menu = document.getElementById("menu");
-    menu.classList.toggle("active");
-  }
-</script>
+    </nav>
   </header>
 
   <main>
-    <h2>Hoş Geldiniz</h2>
-    <p>Günenç Tavukçuluk’a hoş geldiniz. Sağlıklı ve kaliteli tavuk ürünleriyle hizmetinizdeyiz.</p>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Doğallığın ve Kalitenin Adresi</h1>
+          <p>Doğal ve kaliteli üretim ile</p>
+          <a href="urunler.html" class="cta-button">Ürünlerimizi Gör</a>
+          <div class="hero-icons">
+            <span>🐣 Civciv</span>
+            <span>🥚 Yumurta</span>
+            <span>🐓 Tavuk</span>
+            <span>🛠️ Ekipman</span>
+          </div>
+        </div>
+          <div class="hero-image">
+  <img src="yasam-dongusu-turkce.png" alt="Yaşam Döngüsü" style="max-width: 300px; width: 100%; height: auto; border-radius: 12px;">
+</div>
+        </div>
+      </div>
+    </section>
   </main>
-
-  <footer>
-    <p>© 2025 Günenç Tavukçuluk</p>
-  </footer>
 </body>
 </html>
