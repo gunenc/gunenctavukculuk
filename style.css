@@ -73,20 +73,18 @@
     display: block;
   }
 }
-.logo-header {
+.top-bar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: #fff8f0;
 }
-.logo-small {
+.logo-area img {
   max-height: 60px;
   width: auto;
 }
 .social-icons {
-  position: absolute;
-  top: 20px;
-  right: 20px;
   display: flex;
   gap: 10px;
 }
